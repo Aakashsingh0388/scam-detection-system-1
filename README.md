@@ -8,34 +8,32 @@ Online scams are increasing rapidly through SMS and WhatsApp messages, phishing 
 ## Demo Screenshots
 
 **Message Spam Examples:**
-- ![Message Spam 1](public/message spam 1.png)
-- ![Message Spam 2](public/message spam 2.png)
-- ![Message Spam 3](public/message spam 3.png)
+- ![Message Spam 1](public/messagespam1.png)
+- ![Message Spam 2](public/messagespam2.png)
+- ![Message Spam 3](public/messagespam3.png)
 
 **Message Safe Examples:**
-- ![Message Safe 1](public/message safe 1.png)
-- ![Message Safe 2](public/message safe 2.png)
+- ![Message Safe 1](public/messagesafe1.png)
+- ![Message Safe 2](public/messagesafe2.png)
 
 **Link Scam Examples:**
-- ![Link Scam 1](public/link scam 1.png)
-- ![Link Scam 2](public/link scam 2.png)
-- ![Link Scam 3](public/link scam 3.png)
+- ![Link Scam 1](public/linkscam1.png)
+- ![Link Scam 2](public/linkscam2.png)
+- ![Link Scam 3](public/linkscam3.png)
 
 **Link Safe Examples:**
-- ![Link Safe 1](public/link safe 1.png)
-- ![Link Safe 2](public/link safe 2.png)
+- ![Link Safe 1](public/linksafe1.png)
+- ![Link Safe 2](public/linksafe2.png)
 
 **Number Spam Examples:**
-- ![Number Spam 1](public/number spam 1.png)
-- ![Number Spam 2](public/number spam 2.png)
-- ![Number Spam 3](public/number spam 3.png)
+- ![Number Spam 1](public/numberspam1.png)
+- ![Number Spam 2](public/numberspam2.png)
+- ![Number Spam 3](public/numberspam3.png)
 
 **Number Safe Examples:**
-- ![Number Safe 1](public/number safe 1.png)
-- ![Number Safe 2](public/number safe 2.png)
+- ![Number Safe 1](public/numbersafe1.png)
+- ![Number Safe 2](public/numbersafe2.png)
 
-**Demo Video:**
-- ![Demo Video](public/video.mp4)
 
 ## Project Overview
 
