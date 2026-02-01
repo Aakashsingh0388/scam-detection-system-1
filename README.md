@@ -1,5 +1,7 @@
 # ScamShield AI
 
+[Live Demo](https://scam-detection-system.vercel.app/)
+
 ScamShield AI is an explainable, rule-based scam and phishing detection system with an AI-powered explanation layer. It analyzes messages, links, and phone numbers to identify common scam patterns such as urgency cues, OTP/KYC requests, brand impersonation, suspicious URLs, and abnormal phone number formats. Detection is fully rule-based and deterministic. AI (Gemini) is used only to explain the risk, never to decide it.
 
 ## Why ScamShield AI?
