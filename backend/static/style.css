@@ -1,0 +1,509 @@
+/* ============================================
+   ScamShield AI - Stylesheet
+   Clean, Modern, Professional UI
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    /* Colors */
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #64748b;
+    
+    /* Risk Colors */
+    --safe: #22c55e;
+    --safe-bg: #dcfce7;
+    --suspicious: #f59e0b;
+    --suspicious-bg: #fef3c7;
+    --high-risk: #ef4444;
+    --high-risk-bg: #fee2e2;
+    
+    /* Neutrals */
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border: #e2e8f0;
+    
+    /* Spacing */
+    --radius: 12px;
+    --radius-sm: 8px;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* App Container */
+.app-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 48px;
+}
+
+.logo-text h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.tagline {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    background: var(--card-bg);
+    padding: 6px;
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tab-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    background: var(--bg);
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.tab-icon {
+    font-size: 18px;
+}
+
+/* Input Section */
+.input-section {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.input-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.text-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+    background: var(--bg);
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: white;
+}
+
+.text-input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+/* Analyze Button */
+.analyze-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 16px 24px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.analyze-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.analyze-btn:disabled {
+    background: var(--secondary);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-icon {
+    font-size: 20px;
+}
+
+/* Results Section */
+.results-section {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Result Cards */
+.result-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.result-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+/* Risk Card */
+.risk-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.risk-badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.risk-badge.safe {
+    background: var(--safe-bg);
+    color: var(--safe);
+}
+
+.risk-badge.suspicious {
+    background: var(--suspicious-bg);
+    color: #b45309;
+}
+
+.risk-badge.high-risk {
+    background: var(--high-risk-bg);
+    color: var(--high-risk);
+}
+
+/* Risk Meter */
+.risk-meter {
+    margin-bottom: 20px;
+}
+
+.meter-track {
+    height: 12px;
+    background: var(--bg);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.meter-fill {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.5s ease, background 0.3s ease;
+}
+
+.meter-fill.safe {
+    background: linear-gradient(90deg, var(--safe), #4ade80);
+}
+
+.meter-fill.suspicious {
+    background: linear-gradient(90deg, var(--suspicious), #fbbf24);
+}
+
+.meter-fill.high-risk {
+    background: linear-gradient(90deg, #f87171, var(--high-risk));
+}
+
+.meter-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Risk Score */
+.risk-score {
+    text-align: center;
+}
+
+#risk-score-value {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.score-label {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+/* Flags Card */
+.flags-list {
+    list-style: none;
+}
+
+.flags-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: var(--high-risk-bg);
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #991b1b;
+}
+
+.flags-list li::before {
+    content: '⚠️';
+}
+
+/* Explanation Card */
+.explanation-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background: var(--bg);
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--primary);
+}
+
+/* Details Card */
+.details-content {
+    font-size: 14px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: var(--text-secondary);
+}
+
+.detail-value {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #fefce8;
+    border: 1px solid #fef08a;
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    font-size: 13px;
+    color: #854d0e;
+    margin-top: 8px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 24px 0;
+    margin-top: auto;
+}
+
+.footer p {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.footer-note {
+    font-size: 12px;
+    margin-top: 4px;
+    opacity: 0.8;
+}
+
+/* Loading State */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .app-container {
+        padding: 12px;
+    }
+    
+    .header {
+        padding: 20px 0;
+    }
+    
+    .logo-text h1 {
+        font-size: 22px;
+    }
+    
+    .tab-btn {
+        padding: 10px 8px;
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .tab-text {
+        font-size: 11px;
+    }
+    
+    .input-section {
+        padding: 16px;
+    }
+    
+    .result-card {
+        padding: 16px;
+    }
+    
+    #risk-score-value {
+        font-size: 36px;
+    }
+}
+
+/* Safe result background */
+.result-card.risk-card.safe-result {
+    border-left: 4px solid var(--safe);
+}
+
+.result-card.risk-card.suspicious-result {
+    border-left: 4px solid var(--suspicious);
+}
+
+.result-card.risk-card.high-risk-result {
+    border-left: 4px solid var(--high-risk);
+}
+
+/* Embedded items */
+.embedded-section {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.embedded-section h4 {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.embedded-item {
+    display: inline-block;
+    background: var(--bg);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    margin: 2px;
+    word-break: break-all;
+}

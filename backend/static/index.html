@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScamShield AI - Scam & Phishing Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <div class="logo-text">
+                    <h1>ScamShield AI</h1>
+                    <p class="tagline">Not just detecting scams — explaining them.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" data-tab="message">
+                    <span class="tab-icon">📩</span>
+                    <span class="tab-text">Message Scan</span>
+                </button>
+                <button class="tab-btn" data-tab="url">
+                    <span class="tab-icon">🔗</span>
+                    <span class="tab-text">Link Scan</span>
+                </button>
+                <button class="tab-btn" data-tab="phone">
+                    <span class="tab-icon">📞</span>
+                    <span class="tab-text">Number Scan</span>
+                </button>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <!-- Message Tab -->
+                <div class="tab-content active" id="message-tab">
+                    <label class="input-label">
+                        Paste suspicious SMS, WhatsApp, or Email content:
+                    </label>
+                    <textarea 
+                        id="message-input" 
+                        class="text-input"
+                        placeholder="Example: Congratulations! You've won ₹50,000. Click here to claim: bit.ly/win-prize. Share OTP to verify."
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <!-- URL Tab -->
+                <div class="tab-content" id="url-tab">
+                    <label class="input-label">
+                        Paste suspicious link or URL:
+                    </label>
+                    <textarea 
+                        id="url-input" 
+                        class="text-input"
+                        placeholder="Example: http://amaz0n-secure.xyz/login?ref=12345"
+                        rows="3"
+                    ></textarea>
+                </div>
+
+                <!-- Phone Tab -->
+                <div class="tab-content" id="phone-tab">
+                    <label class="input-label">
+                        Enter suspicious phone number:
+                    </label>
+                    <textarea 
+                        id="phone-input" 
+                        class="text-input"
+                        placeholder="Example: +234 812 345 6789 or 9876543210"
+                        rows="2"
+                    ></textarea>
+                </div>
+
+                <!-- Analyze Button -->
+                <button id="analyze-btn" class="analyze-btn">
+                    <span class="btn-icon">🔍</span>
+                    <span class="btn-text">Analyze</span>
+                    <span class="btn-loading" style="display: none;">Analyzing...</span>
+                </button>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="results-section" style="display: none;">
+                <!-- Risk Score Card -->
+                <div class="result-card risk-card">
+                    <div class="risk-header">
+                        <h3>Risk Assessment</h3>
+                        <span id="risk-badge" class="risk-badge">-</span>
+                    </div>
+                    <div class="risk-meter">
+                        <div class="meter-track">
+                            <div id="meter-fill" class="meter-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="meter-labels">
+                            <span>Safe</span>
+                            <span>Suspicious</span>
+                            <span>High Risk</span>
+                        </div>
+                    </div>
+                    <div class="risk-score">
+                        <span id="risk-score-value">0</span>
+                        <span class="score-label">/ 100</span>
+                    </div>
+                </div>
+
+                <!-- Red Flags Card -->
+                <div id="flags-card" class="result-card flags-card" style="display: none;">
+                    <h3>🚩 Red Flags Detected</h3>
+                    <ul id="flags-list" class="flags-list"></ul>
+                </div>
+
+                <!-- AI Explanation Card -->
+                <div class="result-card explanation-card">
+                    <h3>🧠 AI Explanation</h3>
+                    <p id="explanation-text" class="explanation-text">-</p>
+                </div>
+
+                <!-- Details Card -->
+                <div id="details-card" class="result-card details-card" style="display: none;">
+                    <h3>📊 Analysis Details</h3>
+                    <div id="details-content" class="details-content"></div>
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="disclaimer">
+                    <p>⚠️ <strong>Disclaimer:</strong> This is a risk-based analysis, not a guarantee. Always verify through official channels. We do not store any data you submit.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built for Hackathon Demo • Rule-based detection with AI explanation</p>
+            <p class="footer-note">AI explains findings — it does NOT make detection decisions</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

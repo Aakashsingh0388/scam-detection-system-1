@@ -1,0 +1,6 @@
+# ScamShield AI - Dependencies
+# Python 3.8+ required
+
+Flask==3.0.0
+flask-cors==4.0.0
+requests==2.31.0
